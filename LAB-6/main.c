@@ -124,9 +124,9 @@ void sort_hoara(char* str, int first, int last)
         while (*(str + j) > * (str + x))
             j--;
 
-        if (*(str + i) <= *(str + j))
+        if ( i <= j)
         {
-            if (*(str + i) < *(str + j))
+            if (i < j)
             {
                 tmp = *(str + i);
                 *(str + i) = *(str + j);
@@ -135,7 +135,7 @@ void sort_hoara(char* str, int first, int last)
             i++;
             j--;
         }
-    } while (*(str + i) <= *(str + j));
+    } while ( i <= j);
 
     if (i < last)
         sort_hoara(str, i, last);
